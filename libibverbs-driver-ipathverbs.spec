@@ -1,13 +1,12 @@
 Summary:	Userspace driver for the QLogic InfiniBand HCAs
 Summary(pl.UTF-8):	Sterownik przestrzeni użytkownika dla kart QLogic InfiniBand HCA
 Name:		libibverbs-driver-ipathverbs
-Version:	1.2
+Version:	1.2.1
 Release:	1
 License:	BSD or GPL v2
 Group:		Libraries
-#Source0Download: http://www.openfabrics.org/downloads/ipath/
 Source0:	http://www.openfabrics.org/downloads/libipathverbs/libipathverbs-%{version}.tar.gz
-# Source0-md5:	5fc6b28891b76129d9146683c24091ad
+# Source0-md5:	43ad5b3d6de765078c64ef849b07c61e
 URL:		http://openib.org/
 BuildRequires:	libibverbs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -50,8 +49,8 @@ Static version of ipathverbs driver, which may be linked directly into
 application.
 
 %description static -l pl.UTF-8
-Statyczna wersja sterownika ipathverbs, którą można wbudować bezpośrednio
-w aplikację.
+Statyczna wersja sterownika ipathverbs, którą można wbudować
+bezpośrednio w aplikację.
 
 %prep
 %setup -q -n libipathverbs-%{version}
