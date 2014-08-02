@@ -1,12 +1,13 @@
+# TODO: dracut package
 Summary:	Userspace driver for the QLogic InfiniBand HCAs
 Summary(pl.UTF-8):	Sterownik przestrzeni użytkownika dla kart QLogic InfiniBand HCA
 Name:		libibverbs-driver-ipathverbs
-Version:	1.2.1
+Version:	1.3
 Release:	1
 License:	BSD or GPL v2
 Group:		Libraries
-Source0:	http://www.openfabrics.org/downloads/libipathverbs/libipathverbs-%{version}.tar.gz
-# Source0-md5:	43ad5b3d6de765078c64ef849b07c61e
+Source0:	https://www.openfabrics.org/downloads/libipathverbs/libipathverbs-%{version}.tar.gz
+# Source0-md5:	740692ea205c49f7b2be9f81207474cf
 URL:		http://openib.org/
 BuildRequires:	libibverbs-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -77,8 +78,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING README
+%attr(755,root,root) %{_sbindir}/truescale-serdes.cmds
 %attr(755,root,root) %{_libdir}/libipathverbs-rdmav2.so
 %{_sysconfdir}/libibverbs.d/ipath.driver
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/modprobe.d/truescale.conf
 
 %files static
 %defattr(644,root,root,755)
