@@ -1,9 +1,10 @@
+# NOTE: for versions >= 17 see rdma-core.spec
 # TODO: dracut package
 Summary:	Userspace driver for the QLogic InfiniBand HCAs
 Summary(pl.UTF-8):	Sterownik przestrzeni użytkownika dla kart QLogic InfiniBand HCA
 Name:		libibverbs-driver-ipathverbs
 Version:	1.3
-Release:	1
+Release:	1.1
 License:	BSD or GPL v2
 Group:		Libraries
 Source0:	https://www.openfabrics.org/downloads/libipathverbs/libipathverbs-%{version}.tar.gz
